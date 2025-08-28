@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedra, papel, tesoura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:opsz,wght@9..40,100&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  
+  <body>
+    <div class="container">
+      <img class="fundo" src="IMG/11788517_4799438.jpg" alt="" />
+      <h1 class="h1">Pedra, papel e tesoura</h1>
+
+      <div class="computer">
+        <img
+          class="pedraC"
+          id="alternate-reverse"
+          src="IMG/pedra1.png"
+          alt=""
+        />
+        <img class="papelC" src="IMG/papel1.png" alt="" />
+        <img class="tesouraC" src="IMG/tesoura1.png" alt="" />
+      </div>
+
+      <div class="player">
+        <img
+          class="pedraP"
+          id="alternate-reverse"
+          src="IMG/pedra2.png"
+          alt=""
+        />
+        <img class="papelP" src="IMG/papel2.png" alt="" />
+        <img class="tesouraP" src="IMG/tesoura2.png" alt="" />
+      </div>
+
+      <div class="buttonSpace">
+        <div ontouchstart="">
+          <div class="button">
+            <button type="button" class="start">Começar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="escolha">
+        <button type="button" class="close">X</button>
+        <div class="contentChose">
+          <h2>Escolha!</h2>
+          <button type="button" class="botaoPedra">
+            <img src="IMG/carvao.png" alt="" />
+          </button>
+          <button type="button" class="botaoPapel">
+            <img src="IMG/folha-de-papel.png" alt="" />
+          </button>
+          <button type="button" class="botaoTesoura">
+            <img src="IMG/tesoura.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="winning-message">
+        <p class="winning-message-text">Acertou!</p>
+        <button class="winning-message-button">Reiniciar</button>
+      </div>
+    </div>
+
+    <script src="SCRIPT/js.js"></script>
+  </body>
+</html>
