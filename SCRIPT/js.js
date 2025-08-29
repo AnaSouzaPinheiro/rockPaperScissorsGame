@@ -1,9 +1,9 @@
-const pedraP = document.querySelector(".pedraP");
-const pedraC = document.querySelector(".pedraC");
-const papelP = document.querySelector(".papelP");
-const papelC = document.querySelector(".papelC");
-const tesouraP = document.querySelector(".tesouraP");
-const tesouraC = document.querySelector(".tesouraC");
+const pedraP = document.querySelector("#pedraP");
+const pedraC = document.querySelector("#pedraC");
+const papelP = document.querySelector("#papelP");
+const papelC = document.querySelector("#papelC");
+const tesouraP = document.querySelector("#tesouraP");
+const tesouraC = document.querySelector("#tesouraC");
 const botaoPedra = document.querySelector(".botaoPedra");
 const botaoPapel = document.querySelector(".botaoPapel");
 const botaoTesoura = document.querySelector(".botaoTesoura");
@@ -54,12 +54,10 @@ const generateRandomAttack = () => {
 const attack = () => {
   generateRandomAttack();
 
-  // Ocultar todos os elementos de pedra, papel e tesoura
   pedraC.style.display = "none";
   papelC.style.display = "none";
   tesouraC.style.display = "none";
 
-  // Exibir apenas o elemento correspondente à escolha do jogador
   if (attackrandom === pedraC) {
     pedraC.style.display = "block";
   } else if (attackrandom === tesouraC) {
@@ -85,11 +83,10 @@ botaoPedra.addEventListener("click", function () {
     checkForWin();
     checkForLose();
     checkForDraw();
-  }, 2000); // Ajuste o tempo de acordo com a duração da animação (em milissegundos)
+  }, 2000);
 });
 
 botaoPapel.addEventListener("click", function () {
-  // Lógica para quando o botão do papel é clicado
   escolha.classList.remove("show-escolha");
   animationHands();
 
@@ -107,7 +104,6 @@ botaoPapel.addEventListener("click", function () {
 });
 
 botaoTesoura.addEventListener("click", function () {
-  // Lógica para quando o botão da tesoura é clicado
   escolha.classList.remove("show-escolha");
   animationHands();
 
@@ -159,14 +155,11 @@ const checkForLose = () => {
 
 start.addEventListener("click", startGame);
 restartButton.addEventListener("click", function () {
-  /*tesouraP.style.display = "none";
-        papelP.style.display = "none";
-        tesouraC.style.display = "none";
-        papelC.style.display = "none";
-        
-        pedraP.style.display = "block"
-        pedraC.style.display = "block"*/
   document.location.reload(true);
   attackrandom = null;
   winningMessage.classList.remove("show-winning-message");
 });
+
+window.onclick = function (event) {
+  if (event.target == escolha) escolha.classList.remove("show-escolha");
+};
