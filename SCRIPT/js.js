@@ -40,6 +40,13 @@ const animationHands = () => {
   tesouraC.style.display = "none";
   papelP.style.display = "none";
   tesouraP.style.display = "none";
+
+  pedraP.classList.remove("animation-hands");
+  pedraC.classList.remove("animation-hands");
+
+  void pedraP.offsetWidth;
+  void pedraC.offsetWidth;
+
   pedraP.classList.add("animation-hands");
   pedraC.classList.add("animation-hands");
 };
